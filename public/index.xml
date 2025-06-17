@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>José Cardona</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on José Cardona</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 01 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Poverty Classification with Multi-Modal Data</title>
+      <link>http://localhost:1313/projects/panama-poverty/</link>
+      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/panama-poverty/</guid>
+      <description>Using satellite and minimal survey data to predict household poverty in Panama.</description>
+    </item>
+    <item>
+      <title>CHIffordable</title>
+      <link>http://localhost:1313/projects/chiffordable/</link>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/chiffordable/</guid>
+      <description>Using satellite and minimal survey data to predict household poverty in Panama.</description>
+    </item>
+    <item>
+      <title>Tax Collection Dashboard</title>
+      <link>http://localhost:1313/projects/bid_saf_dashboard/</link>
+      <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/bid_saf_dashboard/</guid>
+      <description>A project that enabled visualizing patterns of business tax contributions across sectors and time in Mexico City</description>
+    </item>
+    <item>
+      <title>About me</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;Hola! I&amp;rsquo;m &lt;strong&gt;José Manuel Cardona Arias&lt;/strong&gt;. I&amp;rsquo;m a data-driven problem solver with a hybrid background in policy and technology. Currently pursuing a Master&amp;rsquo;s in &lt;strong&gt;Computational Analysis and Public Policy&lt;/strong&gt; at the &lt;strong&gt;University of Chicago&lt;/strong&gt;, I bring experience at the intersection of data science, geospatial analysis, and international development. Passionate about turning complex data into actionable insights, with a strong interest in machine learning for social impact, public sector innovation, and evidence-based policy.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Poverty rate prediction using multi-modal survey and earth observation data</title>
+      <link>http://localhost:1313/projects/satellite_to_poverty/</link>
+      <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/satellite_to_poverty/</guid>
+      <description>Using satellite and minimal survey data to predict regional poverty rates in Ethiopia.</description>
+    </item>
+    <item>
+      <title>Gender Stereotypes in STEM in Latin America</title>
+      <link>http://localhost:1313/projects/women_stem_latam/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/women_stem_latam/</guid>
+      <description>Using satellite and minimal survey data to predict regional poverty rates in Ethiopia.</description>
+    </item>
+    <item>
+      <title>Stanford-CIDE Coronavirus Simulation Model</title>
+      <link>http://localhost:1313/projects/sc_cosmo/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/sc_cosmo/</guid>
+      <description>A project that enabled modeling of the epidemiology of COVID-19 for diverse populations and geographies</description>
+    </item>
+  </channel>
+</rss>

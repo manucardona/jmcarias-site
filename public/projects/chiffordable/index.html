@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  CHIffordable · José Cardona
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="José Manuel Cardona Arias">
+<meta name="description" content="Using satellite and minimal survey data to predict household poverty in Panama.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CHIffordable">
+  <meta name="twitter:description" content="Using satellite and minimal survey data to predict household poverty in Panama.">
+
+<meta property="og:url" content="http://localhost:1313/projects/chiffordable/">
+  <meta property="og:site_name" content="José Cardona">
+  <meta property="og:title" content="CHIffordable">
+  <meta property="og:description" content="Using satellite and minimal survey data to predict household poverty in Panama.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2025-03-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-01T00:00:00+00:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/projects/chiffordable/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      José Cardona
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/publications/">Publications</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/projects/chiffordable/">
+          CHIffordable
+        </a>
+      </h1>
+    </header>
+
+    <p><strong>What it does</strong><br>
+This project seeks to identify places where low-income families can afford rental housing within a specified income and a percentage of their income they are willing to spend on rent. Leveraging data analysis and geospatial mapping, it will also explore these neighborhoods&rsquo; demographic, economic, and social characteristics. The findings aim to provide actionable insights for policymakers and community stakeholders, offering a comprehensive resource for addressing Chicago&rsquo;s affordable housing crisis.</p>
+<p><a href="https://youtu.be/ecBzrd5wgFA"  class="external-link" target="_blank" rel="noopener"><img src="/images/projects/chiffordable_gif.gif" alt="Demo GIF"></a></p>
+<p><strong>Why I made it</strong><br>
+The city of Chicago has identified “an affordable housing gap of around 120,000 homes and 240,000 rental units”, 42% of its residents are burdened by housing costs that exceed 30% of their income and “22% pay more than half of their income”.</p>
+<p><strong>Tools &amp; Technologies</strong></p>
+<ul>
+<li>Feature extraction: httpx, regex, lxml, re</li>
+<li>Geospatial analysis: shapely, geopandas</li>
+<li>Data Visualization: folium, plotly</li>
+<li>App Development: dash, webbrowser</li>
+</ul>
+<p><strong>What I learned</strong></p>
+<ul>
+<li>How to integarte data from different sources with non-standardized formats.</li>
+<li>How to effectively tell a story using data.</li>
+<li>Building full pipelines for data science projects.</li>
+<li>Creating interactive apps with an html front-end and hosted using Dash.</li>
+</ul>
+<p><strong>Real-world use / impact</strong><br>
+Produced interactive maps showing distribution of affordable housing in Chicago. Identified underserved areas. This project has the potential to support policy advocacy or community planning.</p>
+<p><strong>Team</strong><br>
+Built alongside Daniela Ayala, Agustín Eizaguirre, and María José Reyes as a final project of the CAPP122 Computer Science with Applications 2 class.</p>
+<p>🔗 <strong>Code</strong><br>
+<a href="https://github.com/uchicago-2025-capp30122/30122-project-chiffordable/tree/main"  class="external-link" target="_blank" rel="noopener">View on GitHub</a></p>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2024 -
+    
+    2025
+     José Manuel Cardona Arias 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

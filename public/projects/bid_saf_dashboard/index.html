@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Tax Collection Dashboard · José Cardona
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="José Manuel Cardona Arias">
+<meta name="description" content="A project that enabled visualizing patterns of business tax contributions across sectors and time in Mexico City">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tax Collection Dashboard">
+  <meta name="twitter:description" content="A project that enabled visualizing patterns of business tax contributions across sectors and time in Mexico City">
+
+<meta property="og:url" content="http://localhost:1313/projects/bid_saf_dashboard/">
+  <meta property="og:site_name" content="José Cardona">
+  <meta property="og:title" content="Tax Collection Dashboard">
+  <meta property="og:description" content="A project that enabled visualizing patterns of business tax contributions across sectors and time in Mexico City">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2024-08-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-08-01T00:00:00+00:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/projects/bid_saf_dashboard/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      José Cardona
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/publications/">Publications</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/projects/bid_saf_dashboard/">
+          Tax Collection Dashboard
+        </a>
+      </h1>
+    </header>
+
+    <p><strong>What it does</strong><br>
+I developed an interactive data visualization dashboard to explore and monitor tax compliance among registered businesses in Mexico City. Built primarily in R using Shiny and ggplot2, the tool is composed of four components, each designed to serve a different analytical purpose.</p>
+<ol>
+<li>Specific Variable Visualization: this module allows users to graphically explore individual tax-related variables based on official administrative data. Users can also seggregate results by business size, legal entity type and municipality. Users can also specify the start and end month/year of the analysis period through a menu interface.</li>
+<li>Control table: this section provides a table of descriptive statistics for the outcome variables over a selected time period. Unlike Component 1, the set of variables is fixed, but users can still apply segmentation and time filters.</li>
+<li>Treatment effect visualizations: This module focuses on experimental results, displaying average outcomes by treatment condition based on a randomized controlled trial (RCT) of communication interventions.Visualizations show weighted averages by treatment group, and users can segment the results by business size or municipality.</li>
+<li>Temporal Impact Evolution: This final module visualizes treatment-control differences over time, helping to identify month-by-month intervention effects. Users can monitor trends through difference-in-means or difference-in-proportions charts across several months.</li>
+</ol>
+<p><a href="https://youtu.be/1D6tIifEE1k"  class="external-link" target="_blank" rel="noopener"><img src="/images/projects/bidsaf_gif.gif" alt="Demo GIF"></a></p>
+<p><strong>Why I made it</strong><br>
+This project was an opportunity to apply data science and experimental design to a real-world policy issue: improving tax compliance in one of the largest urban economies in Latin America, Mexico City. By visualizing granular administrative data and enabling interactive exploration, the dashboard empowers public officials to detect behavioral patterns—such as underreporting or late payments—and take evidence-informed action.</p>
+<p>I joined the initiative to sharpen my skills in building user-friendly analytics tools for government stakeholders. Working closely with the city’s finance department gave me firsthand experience designing for non-technical users, navigating complex public data, and translating insights into operational strategies.</p>
+<p><strong>Tools &amp; Technologies</strong></p>
+<ul>
+<li>R – for data processing, statistical modeling, and visualization</li>
+<li>Shiny – to build the interactive dashboard interface</li>
+<li>ggplot2 – for creating high-quality and customizable plots</li>
+<li>dplyr and tidyr – for data manipulation and cleaning</li>
+<li>readr – for importing large administrative datasets efficiently</li>
+<li>Git – for version control and collaborative development</li>
+<li>HTML/CSS (via Shiny) – to customize the UI elements of the app</li>
+</ul>
+<p><strong>What I learned</strong><br>
+Key takeaways include:</p>
+<ul>
+<li>
+<p>Designing with messy public data in mind. I gained hands-on experience cleaning and validating administrative tax records, dealing with missing fields, zero-inflated variables, and inconsistencies across reporting periods.</p>
+</li>
+<li>
+<p>Experimental data needs thoughtful visualization. Communicating treatment effects to non-technical stakeholders taught me how to represent uncertainty, ensure correct group comparisons, and simplify statistical outputs without losing rigor.</p>
+</li>
+<li>
+<p>Iterative collaboration improves tools. By working closely with policymakers and analysts at the Secretaría, I refined the dashboard through feedback loops—enhancing usability and surfacing the most policy-relevant insights.</p>
+</li>
+</ul>
+<p><strong>Real-world use / impact</strong><br>
+The dashboard was used by analysts and decision-makers at Mexico City’s Secretaría de Administración y Finanzas to monitor compliance patterns across boroughs and business types. It helped:</p>
+<ul>
+<li>Identify high-risk segments with consistent underreporting behavior, guiding audit prioritization.</li>
+<li>Track the impact of behavioral interventions (e.g., reminder messages) in real time, month by month.</li>
+<li>Produce reports for internal policy meetings using standardized visual outputs.</li>
+<li>Inform future campaigns for taxpayer education and digital outreach, targeting low-compliance zones.</li>
+<li>The tool remains a reference point for ongoing fiscal policy experiments and monitoring initiatives.</li>
+</ul>
+<p><strong>Team</strong><br>
+Built under the supervision of Phd. Hernán Bejarano and Phd. Lysandra Elyne.</p>
+<p>🔗 <strong>Code</strong><br>
+<em>Private Repo</em></p>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2024 -
+    
+    2025
+     José Manuel Cardona Arias 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

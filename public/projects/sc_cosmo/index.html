@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Stanford-CIDE Coronavirus Simulation Model · José Cardona
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="José Manuel Cardona Arias">
+<meta name="description" content="A project that enabled modeling of the epidemiology of COVID-19 for diverse populations and geographies">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Stanford-CIDE Coronavirus Simulation Model">
+  <meta name="twitter:description" content="A project that enabled modeling of the epidemiology of COVID-19 for diverse populations and geographies">
+
+<meta property="og:url" content="http://localhost:1313/projects/sc_cosmo/">
+  <meta property="og:site_name" content="José Cardona">
+  <meta property="og:title" content="Stanford-CIDE Coronavirus Simulation Model">
+  <meta property="og:description" content="A project that enabled modeling of the epidemiology of COVID-19 for diverse populations and geographies">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2020-05-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-05-01T00:00:00+00:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/projects/sc_cosmo/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      José Cardona
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/publications/">Publications</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/projects/sc_cosmo/">
+          Stanford-CIDE Coronavirus Simulation Model
+        </a>
+      </h1>
+    </header>
+
+    <p><strong>What it does</strong><br>
+The SC-COSMO modeling framework enables modeling of the epidemiology of COVID-19 for diverse populations and geographies. At its core, it is an age-structured, multi-compartment susceptible-exposed-infected-recovered (AS-MC-SEIR) model implemented in the R programming language. The model incorporates realistic demography and patterns of contacts sufficient for transmission. The model also incorporates non-pharmaceutical interventions (NPIs) (e.g., “social distancing”) timing and effects on reductions in contacts which may differ by demography. The model framework also allows for the comparison of many, future what-if scenarios and how they might impact outcomes over time and cumulatively (e.g., infections, cases, deaths, etc.). The framework can be implemented rapidly for specific populations and geographies based on generally available data from these places along with methods we have implemented to infer data elements that are unavailable (e.g., imputation and calibration).</p>
+<p><img src="/images/projects/sc_cosmo.webp" alt="Demo Image"></p>
+<p><strong>Why I made it</strong><br>
+During the COVID-19 lockdown, I found myself with unexpected free time and a strong desire to put my data analysis, visualization, and research skills to meaningful use. I reached out to my undergraduate thesis advisor—who was leading the SC-COSMO project—and volunteered to contribute. This was both an opportunity to support a critical public health effort and a way to challenge myself technically during an uncertain time.</p>
+<p><strong>Tools &amp; Technologies</strong></p>
+<ul>
+<li>R – for implementing the AS-MC-SEIR simulation model</li>
+<li>RMarkdown – for documentation and reproducible reports</li>
+<li>ggplot2 / plotly – for data visualization</li>
+<li>Web scrapping - for extracting data from publicly available reports</li>
+<li>Parallel computing (e.g., doParallel, foreach) – to speed up calibration and scenario simulations</li>
+<li>Git – for version control and collaborative development</li>
+<li>Public COVID-19 datasets – for calibration (e.g., case counts, testing data, demographic data)</li>
+<li>Empirical contact matrices – for parameter inference across geographies</li>
+</ul>
+<p><strong>What I learned</strong><br>
+Key takeaways include:</p>
+<ul>
+<li>Gained hands-on experience implementing and adapting a complex epidemiological model (AS-MC-SEIR) in R.</li>
+<li>Improved my ability to work with real-world data sources, including demographic and COVID-19 surveillance data.</li>
+<li>Learned to calibrate large models using noisy and incomplete datasets.</li>
+<li>Developed stronger skills in data visualization and communicating model outputs under uncertainty.</li>
+<li>Gained experience in optimizing code for speed using parallel processing in R.</li>
+</ul>
+<p><strong>Real-world use / impact</strong><br>
+The SC-COSMO model played a key role in supporting real-time policy decisions during the COVID-19 pandemic in Mexico and Latin America. It provided government agencies and public health institutions with data-driven forecasts to evaluate the potential effects of non-pharmaceutical interventions like lockdowns, school closures, and mobility restrictions. By simulating dozens of “what-if” scenarios calibrated to local data, the model helped inform strategic decisions around reopening timelines and resource allocation. My contributions supported the generation of visual outputs and scenario analyses that were presented to health authorities, helping translate complex epidemiological dynamics into actionable insights at a time of great urgency.</p>
+<p><strong>Team</strong><br>
+<a href="https://www.sc-cosmo.org/"  class="external-link" target="_blank" rel="noopener">SC-Cosmo Consortium </a></p>
+<p>🔗 <strong>Code</strong><br>
+<a href="https://github.com/PADeCI"  class="external-link" target="_blank" rel="noopener">View on GitHub</a></p>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2024 -
+    
+    2025
+     José Manuel Cardona Arias 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

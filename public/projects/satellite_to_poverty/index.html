@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Poverty rate prediction using multi-modal survey and earth observation data · José Cardona
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="José Manuel Cardona Arias">
+<meta name="description" content="Using satellite and minimal survey data to predict regional poverty rates in Ethiopia.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Poverty rate prediction using multi-modal survey and earth observation data">
+  <meta name="twitter:description" content="Using satellite and minimal survey data to predict regional poverty rates in Ethiopia.">
+
+<meta property="og:url" content="http://localhost:1313/projects/satellite_to_poverty/">
+  <meta property="og:site_name" content="José Cardona">
+  <meta property="og:title" content="Poverty rate prediction using multi-modal survey and earth observation data">
+  <meta property="og:description" content="Using satellite and minimal survey data to predict regional poverty rates in Ethiopia.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2023-07-21T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-07-21T00:00:00+00:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/projects/satellite_to_poverty/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      José Cardona
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/publications/">Publications</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/projects/satellite_to_poverty/">
+          Poverty rate prediction using multi-modal survey and earth observation data
+        </a>
+      </h1>
+    </header>
+
+    <p><strong>What it does</strong><br>
+This project uses a multi-modal machine learning pipeline that:</p>
+<ol>
+<li>Extractes visual features from freely available Sentinel-2 satellite imagery (10m resolution) using the MOSAIKS API.</li>
+<li>Combines these features with survey data from Ethiopia&rsquo;s nationally representative LSMS dataset.</li>
+<li>Trains several classification models to predict household-level poverty status.</li>
+<li>Estimates regional poverty rates as a weighted average of predictions.</li>
+<li>Optimizes survey design by selecting questions that are most complementary to image-based features.</li>
+</ol>
+<p>This approach improves prediction while minimizing data collection burdens.</p>
+<p><img src="/images/projects/satelite_roc.jpeg" alt="Demo Image"></p>
+<p><strong>Why I made it</strong><br>
+Traditional poverty measurement relies on long and costly household surveys, which are often infeasible for frequent or large-scale data collection. This project seeks to bridge the gap by integrating satellite imagery with a minimal set of survey questions to create a reliable, low-cost poverty estimation tool. This hybrid approach is particularly useful for:</p>
+<ul>
+<li>Governments or NGOs needing poverty data where survey infrastructure is weak.</li>
+<li>Programs operating under severe cost or time constraints that still require household-level poverty targeting.</li>
+</ul>
+<p><strong>Tools &amp; Technologies</strong></p>
+<ul>
+<li><strong>Tools</strong>: Python, scikit-learn, LightGBM, MOSAIKS, PCA, Sentinel-2 imagery (via Microsoft Planetary Computer)</li>
+<li><strong>Techniques</strong>: Proxy Means Tests, feature selection, image featurization, supervised classification, bootstrapping, error decomposition</li>
+</ul>
+<p><strong>What I learned</strong><br>
+Key takeaways include:</p>
+<ul>
+<li>Process and integrate satellite imagery using Sentinel-2 data and the Microsoft Planetary Computer, including selecting cloud-free tiles and aligning imagery to survey clusters.</li>
+<li>Engineer survey data for predictive modeling, including transforming categorical responses, handling missing values, and converting full surveys into interpretable binary variables.</li>
+<li>Train and evaluate supervised models (e.g., LightGBM, EBMs) for binary classification tasks, incorporating sample weights and stratified train-test splits to match national poverty distributions.</li>
+<li>Design and evaluate proxy means tests (PMTs) by selecting optimal subsets of survey questions and combining them with geospatial features.</li>
+<li>Measure model performance using custom metrics, such as poverty rate error (PRE), and perform rigorous evaluation using cross-validation and bootstrapped confidence intervals.</li>
+<li>Balance model simplicity and interpretability for use cases involving policymakers, demonstrating that lightweight models can outperform black-box approaches when designed well.</li>
+</ul>
+<p><strong>Real-world use / impact</strong><br>
+This work demonstrates that satellite image features can:</p>
+<ul>
+<li>Replace or complement survey data when unavailable.</li>
+<li>Support better targeting of poverty interventions.</li>
+<li>Enable cost-effective, scalable poverty monitoring in developing regions.</li>
+</ul>
+<p>It also contributes methodological advances by proposing:</p>
+<ul>
+<li>A survey + image guided variable selection method, which selects survey questions that are maximally informative when combined with remote sensing data.</li>
+<li>A non-deep-learning-based image featurization pipeline that is both interpretable and computationally lightweight.</li>
+</ul>
+<p><strong>Team</strong></p>
+<ul>
+<li>Simone Fobi (Microsoft AI for Good Lab)</li>
+<li>Manuel Cardona (IPA)</li>
+<li>Elliott Collins (IPA)</li>
+<li>Caleb Robinson, Anthony Ortiz, Tina Sederholm, Rahul Dodhia, Juan Lavista Ferres (Microsoft AI for Good Lab)</li>
+</ul>
+<p>🔗 <strong>Code</strong><br>
+<a href="https://github.com/manucardona/satellite_to_poverty/tree/master"  class="external-link" target="_blank" rel="noopener">View on GitHub</a></p>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2024 -
+    
+    2025
+     José Manuel Cardona Arias 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>
